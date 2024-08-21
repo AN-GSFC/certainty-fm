@@ -240,6 +240,24 @@ free_threshold = st.sidebar.slider(
 # File uploader (not in the sidebar)
 uploaded_file = st.file_uploader("Choose a TIFF image", type=["tif"])
 
+if gpu_available:
+    device='cuda'
+else:
+    device='cpu'
+
+if not os.path.exists("original_model/model.pth"):
+    with st.spinner("Please wait... downloading model..."):
+        config_path = hf_hub_download(repo_id="ibm-nasa-geospatial/Prithvi-100M-sen1floods11", filename="sen1floods11_Prithvi_100M.py")
+        ckpt = hf_hub_download(repo_id="ibm-nasa-geospatial/Prithvi-100M-sen1floods11", filename='sen1floods11_Prithvi_100M.pth')
+        finetuned_model = init_segmentor(Config.fromfile(config_path), ckpt, device=device)
+
+        if not os.path.exists("original_model/model.pth"):
+            os.makedirs("original_model", exist_ok=True) 
+            torch.save(finetuned_model, "original_model/model.pth")
+            st.success('Prithvi-100M found and initialized for inference', icon="✅")
+else:
+    st.success('Prithvi-100M found and initialized for inference', icon="✅")
+
 # Run inference when the button is clicked
 if uploaded_file and st.button("Run Inference"):
     with st.spinner("Running inference..."):
