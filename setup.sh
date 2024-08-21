@@ -6,6 +6,7 @@ pip install -e .
 pip install -U openmim
 pip install ipykernel
 pip install ipywidgets
+pip install streamlit
 mim install mmcv-full==1.6.2 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.11.0/index.html
 yes | pip uninstall numpy
 pip install numpy==1.26.4
