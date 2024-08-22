@@ -16,7 +16,7 @@ We have also integrated our implementation into an interactive web dashboard. Th
 **Dashboard UI:**
 ![image](https://github.com/user-attachments/assets/533ed5f4-d708-4ad4-9f3e-707ca377e9b0)
 
-## Instructions 
+## Installation
 
 ### Environment Setup
 
@@ -26,12 +26,11 @@ We have also integrated our implementation into an interactive web dashboard. Th
 
 2. **Activate the conda environment:**
    ```bash
-    conda activate prithvi_uq
+   conda activate prithvi_uq
 
 3. **Run the setup script to install dependencies:**
    ```bash
-    bash setup.sh
-
+   bash setup.sh
 
 ### Dashboard Setup 
 
