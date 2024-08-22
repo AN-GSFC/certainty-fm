@@ -1,7 +1,5 @@
 # certainty-fm
 
-**Empowering Trustworthy Image Segmentation with Uncertainty Quantification**
-
 This repository accompanies the paper **"Towards Trustworthy and Reliable Image Segmentation Foundation Models"** (An Ngo, Michael Little) and provides an implementation of MC dropout uncertainty quantification for the Prithvi-100M foundation model's image segmentation task. Uncertainty estimates are then applied to binary flood predictions, enhancing the model's ability to provide nuanced and reliable results.
 
 ## Examples from the paper
