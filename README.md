@@ -9,7 +9,7 @@ This repository accompanies the paper **"Towards Trustworthy and Reliable Image 
 
 ## Inference Dashboard
 
-We have also integrated our implementation into an interactive web dashboard. The dashboard can be used to perform flood segmentation on uploaded satellite imagery with Prithvi-100M, while also visualizing uncertainty quantification and supporting predictions.
+The implementation is integrated into  an interactive web dashboard. The dashboard can be used to perform flood segmentation on uploaded satellite imagery with Prithvi-100M, while also visualizing uncertainty quantification and supporting predictions.
 
 **Dashboard UI:**
 ![image](https://github.com/user-attachments/assets/533ed5f4-d708-4ad4-9f3e-707ca377e9b0)
